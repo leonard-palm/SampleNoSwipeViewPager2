@@ -7,15 +7,17 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 
 private const val COUNT = 3
 
+/**
+ * @author Leonard Palm
+ */
 class MyFragmentAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager, lifecycle) {
 
     init {
-
+        // Direkt alle Fragment Instanzen erzeugen
         for( i in 0 until COUNT){
             createFragment(i)
         }
     }
-
 
     override fun getItemCount(): Int {
         return COUNT
